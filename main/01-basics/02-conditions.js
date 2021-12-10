@@ -2,8 +2,14 @@
  * Write a function that returns "raspberry !" if the provided fruit is a raspberry, and "doh !" otherwise
  */
 export function basicCondition(fruit) {
-    
-}
+    if (fruit == "raspberry"){
+        return "raspberry !"
+    }
+    else {
+        return "doh !"
+    }
+}  
+
 
 /**
  * Write a function that generates a random number between 1 and 10 and takes a number as an argument.
@@ -12,12 +18,26 @@ export function basicCondition(fruit) {
  */
 export function guessTheNumber(n) {
     const random = Math.floor(10 * Math.random() + 1)
+    if (n < random){
+        return "higher !"}  
+
+    else if (n > random){
+        return "lower !"}
+
+    else if (n == random){
+        return "Yes the number was " + n}
 }
+console.log(guessTheNumber(6))
 
 /**
  * Write a function that computes the sum of the two given integer values. If the two values are the same, then return triple their sum
  */
 export function sumOrTriple(a, b) {
+    if (a == b) {
+        return (a + b) * 3}
+    else {
+        return a + b
+    }
     
 }
 
@@ -27,13 +47,28 @@ export function sumOrTriple(a, b) {
  * To get the absolute difference of a number, use Math.abs(number)
  */
 export function absoluteDiff(n) {
-    
+    if (n > 51) {
+        return (n - 51)*3
+    }
+    else {
+        return 51 - n
+    }
 }
 
 /**
  * Write a function to check two given integers, and return true if one of them is 30 or if their sum is 30
  */
 export function is30OrSumIs30(a, b) {
+    if (a == 30 ){
+        return true}
+     if (b == 30 ){
+        return true}
+    if (a + b == 30){
+        return true
+    }
+    else {
+        return false
+    }
     
 }
 
@@ -41,14 +76,72 @@ export function is30OrSumIs30(a, b) {
  * Write a function to check whether a given positive number is a multiple of 3 or a divisible by 7
  */
 export function isMultipleOf3OrDivisibleBy7(n) {
-    
+    if (n>0){
+
+        if (n%3==0){
+
+            return true
+
+        }
+
+        else if (n%7==0){
+
+            return true
+
+        }
+
+        else{
+
+            return false
+
+        }
+
+    }
 }
 
 /**
  * Write a function to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal
  */
 export function closestTo100(x, y) {
-    
+    if (x==y){
+
+        return 0
+
+    }
+
+    else if (x>100){
+
+        if (x<y){
+
+            return x
+
+        }
+
+        else if (x>y){
+
+            return y
+
+        }
+
+    }
+
+    else if (x<100){
+
+        if (x<y){
+
+            return y
+
+        }
+
+        else if (x>y){
+
+            return x
+
+        }
+
+    }
+
+ 
 }
 
 /**
@@ -62,5 +155,12 @@ export function closestTo100(x, y) {
  * if a word is unknown, "UNKNOWN" should be returned
  */
 export function categorizeWord(word) {
+    if (word === "raspberry" || word === "orange" || word === "apple" || word === "banana")
+        return "FRUIT"
+    if (word === "paris" || word === "london" || word === "new-york" || word === "berlin")
+        return "CITY"
+    if (word === "cat" || word === "dog"|| word === "bird"|| word === "horse" || word === "fish")
+        return "ANIMAL"
     
+    return "UNKNOWN"
 }
