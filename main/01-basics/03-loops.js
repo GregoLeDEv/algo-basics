@@ -2,8 +2,27 @@
  * Write a function that returns the index of the first occurence of an element in the provided array
  */
 export function find(array, element) {
-    
+
+let i=0
+
+let goal=0
+
+while (element != goal){
+
+    goal = array[i]
+
+    if (element != goal){
+
+        i=i+1
+
+    }  
+
 }
+
+return i
+
+}
+
 
 /**
  * Write a function that return the input word with reversed letters
