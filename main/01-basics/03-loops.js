@@ -3,23 +3,23 @@
  */
 export function find(array, element) {
 
-let i=0
+    let i = 0
 
-let goal=0
+    let goal = 0
 
-while (element != goal){
+    while (element != goal) {
 
-    goal = array[i]
+        goal = array[i]
 
-    if (element != goal){
+        if (element != goal) {
 
-        i=i+1
+            i = i + 1
 
-    }  
+        }
 
-}
+    }
 
-return i
+    return i
 
 }
 
